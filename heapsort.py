@@ -39,9 +39,9 @@ def is_sorted(seq):
 
 from random import randrange as uniform
 
-x = [ uniform(50) for _ in range(1, 20) ]
+x = [ uniform(1000) for _ in range(1, 10000) ]
 
-print(x)
+print(x[1:20])
 heapSort(x)
 assert(is_sorted(x))
-print(x)
+print(x[1:20])
