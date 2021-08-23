@@ -38,6 +38,5 @@ from random import randrange as uniform
 x = [ uniform(50) for _ in range(1, 20) ]
 
 print(x)
-print(x.sort())
 heapSort(x)
 print(x)
