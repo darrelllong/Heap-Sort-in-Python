@@ -27,9 +27,15 @@ def heapSort(seq):
     first = 0
     last  = len(seq) - 1
     buildHeap(seq, last)
-    for leaf in range(last, 0, -1):
+    for leaf in range(last, first, -1):
         seq[first], seq[leaf] = seq[leaf], seq[first],
         fixHeap(seq, first, leaf - 1)
+
+def is_sorted(seq):
+    for i in range(1, len(seq)):
+        if seq[i - 1] > seq[i]:
+            return False
+    return True
 
 from random import randrange as uniform
 
@@ -37,4 +43,5 @@ x = [ uniform(50) for _ in range(1, 20) ]
 
 print(x)
 heapSort(x)
+assert(is_sorted(x))
 print(x)
