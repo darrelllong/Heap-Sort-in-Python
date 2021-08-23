@@ -4,7 +4,7 @@
 
 def maxChild(seq, first, last):
     left  = 2 * first
-    right = left + 1;
+    right = left + 1
     return right if right <= last and seq[right] > seq[left] else left
 
 def fixHeap(seq, first, last):
@@ -39,7 +39,7 @@ def is_sorted(seq):
 
 from random import randrange as uniform
 
-x = [ uniform(1000) for _ in range(1, 10000) ]
+x = [ uniform(10000) for _ in range(1, 10000) ]
 
 print(x[1:20])
 heapSort(x)
