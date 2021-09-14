@@ -28,7 +28,7 @@ def heapSort(seq):
     last  = len(seq) - 1
     buildHeap(seq, last)
     for leaf in range(last, first, -1):
-        seq[first], seq[leaf] = seq[leaf], seq[first],
+        seq[first], seq[leaf] = seq[leaf], seq[first]
         fixHeap(seq, first, leaf - 1)
 
 def is_sorted(seq):
